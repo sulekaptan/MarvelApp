@@ -39,10 +39,11 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Text("Powered by Şule Kaptan")
-                        .font(.footnote)
+                    Text("Powered by Şule Kaptan\n Version 1.0")
+                        .font(.subheadline)
                         .foregroundColor(.white)
                         .padding()
+                        .multilineTextAlignment(.center)
                 }
             }
             .onAppear {

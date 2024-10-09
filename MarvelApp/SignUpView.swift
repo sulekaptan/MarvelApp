@@ -68,7 +68,7 @@ struct SignUpView: View {
                         }
                         .padding(.horizontal, 50)
                         .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Hata"), message: Text(alertMessage), dismissButton: .default(Text("Tamam")))
+                            Alert(title: Text("ERROR"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                         }
                             
                         Button(action: {
@@ -90,10 +90,8 @@ struct SignUpView: View {
                     HStack {
                         Spacer()
                         
-                        Button(action: {
-                            // Kayıt ekranına yönlendirme
-                        }) {
-                            Text("Alreedy have an account? Login")
+                        NavigationLink(destination: LoginView()) {
+                            Text("Already have an account? Login")
                                 .font(.footnote)
                                 .foregroundColor(.black)
                                 .underline()
@@ -101,9 +99,8 @@ struct SignUpView: View {
                         .padding(.horizontal, 30)
                         .padding(.bottom, 20)
                     }
-
-
                 }
+                .navigationBarBackButtonHidden(true)
         }
     }
 }

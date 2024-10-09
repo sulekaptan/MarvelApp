@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */; };
+		E433B3152CB6FE8F000A655F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3142CB6FE8F000A655F /* HomeView.swift */; };
+		E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3162CB70C0A000A655F /* TabBarView.swift */; };
+		E433B3192CB70E3E000A655F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3182CB70E3E000A655F /* ProfileView.swift */; };
+		E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B31A2CB70E49000A655F /* FavoritesView.swift */; };
 		E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D65082CB441F3004232C1 /* SignUpView.swift */; };
 		E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FE9D22CB1D31F00770ACC /* LoginView.swift */; };
+		E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A878542CB7204D00E31A83 /* MainCard.swift */; };
 		E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93672CB00414006483CD /* MarvelAppApp.swift */; };
 		E4AD936A2CB00414006483CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93692CB00414006483CD /* ContentView.swift */; };
 		E4AD936C2CB00415006483CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936B2CB00415006483CD /* Assets.xcassets */; };
@@ -18,8 +23,13 @@
 
 /* Begin PBXFileReference section */
 		E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		E433B3142CB6FE8F000A655F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E433B3162CB70C0A000A655F /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E433B3182CB70E3E000A655F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E433B31A2CB70E49000A655F /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E44D65082CB441F3004232C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E46FE9D22CB1D31F00770ACC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E4A878542CB7204D00E31A83 /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
 		E4AD93642CB00414006483CD /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AD93672CB00414006483CD /* MarvelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppApp.swift; sourceTree = "<group>"; };
 		E4AD93692CB00414006483CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,9 +71,14 @@
 				E4AD93692CB00414006483CD /* ContentView.swift */,
 				E46FE9D22CB1D31F00770ACC /* LoginView.swift */,
 				E44D65082CB441F3004232C1 /* SignUpView.swift */,
-				E4AD936B2CB00415006483CD /* Assets.xcassets */,
-				E4AD936D2CB00415006483CD /* Preview Content */,
 				E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */,
+				E4AD936B2CB00415006483CD /* Assets.xcassets */,
+				E433B3142CB6FE8F000A655F /* HomeView.swift */,
+				E4AD936D2CB00415006483CD /* Preview Content */,
+				E433B3162CB70C0A000A655F /* TabBarView.swift */,
+				E433B3182CB70E3E000A655F /* ProfileView.swift */,
+				E433B31A2CB70E49000A655F /* FavoritesView.swift */,
+				E4A878542CB7204D00E31A83 /* MainCard.swift */,
 			);
 			path = MarvelApp;
 			sourceTree = "<group>";
@@ -146,11 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E433B3192CB70E3E000A655F /* ProfileView.swift in Sources */,
 				E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
+				E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */,
+				E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */,
 				E4AD936A2CB00414006483CD /* ContentView.swift in Sources */,
+				E433B3152CB6FE8F000A655F /* HomeView.swift in Sources */,
 				E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */,
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
+				E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

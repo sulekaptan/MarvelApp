@@ -20,7 +20,7 @@ struct ForgotPasswordView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 20) {
-                Image(systemName: "lock.fill")
+                Image(systemName: "lock.rotation")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
@@ -42,11 +42,11 @@ struct ForgotPasswordView: View {
                 Button (action: {
                     //şifre sıfırlama işlemi
                     if email.isEmpty {
-                        alertMessage = "E-mail alanı boş olamaz."
+                        alertMessage = "Email field cannot be empty!"
                         showAlert = true
                     } else {
                         //şifre sıfırlama bağlantısı gönderme kodu
-                        alertMessage = "Şifre sıfırlama bağlantısı gönderildi."
+                        alertMessage = "Password reset link has been sent."
                         showAlert = true
                     }
                 }) {
@@ -62,7 +62,7 @@ struct ForgotPasswordView: View {
                 Spacer()
             }
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Uyarı"), message: Text(alertMessage), dismissButton: .default(Text("Tamam")))
+                Alert(title: Text("Alert"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
         }
     }

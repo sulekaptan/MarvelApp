@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "resized_minimalistic_M_logo_1024x1024.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
