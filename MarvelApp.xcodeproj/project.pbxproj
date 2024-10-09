@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */; };
 		E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D65082CB441F3004232C1 /* SignUpView.swift */; };
 		E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FE9D22CB1D31F00770ACC /* LoginView.swift */; };
 		E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93672CB00414006483CD /* MarvelAppApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		E44D65082CB441F3004232C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E46FE9D22CB1D31F00770ACC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E4AD93642CB00414006483CD /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,10 +59,11 @@
 			children = (
 				E4AD93672CB00414006483CD /* MarvelAppApp.swift */,
 				E4AD93692CB00414006483CD /* ContentView.swift */,
-				E4AD936B2CB00415006483CD /* Assets.xcassets */,
-				E4AD936D2CB00415006483CD /* Preview Content */,
 				E46FE9D22CB1D31F00770ACC /* LoginView.swift */,
 				E44D65082CB441F3004232C1 /* SignUpView.swift */,
+				E4AD936B2CB00415006483CD /* Assets.xcassets */,
+				E4AD936D2CB00415006483CD /* Preview Content */,
+				E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */,
 			);
 			path = MarvelApp;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
 				E4AD936A2CB00414006483CD /* ContentView.swift in Sources */,
+				E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */,
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

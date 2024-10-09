@@ -27,6 +27,11 @@ struct SignUpView: View {
                         .scaledToFit()
                         .frame(width: 150, height: 150)
                         .padding(.top, 80)
+                    
+                    Text("Hey! Join now.")
+                        .font(.title)
+                        .bold()
+                        .fontDesign(.serif)
                 
                     
                     VStack(spacing: 15) {
@@ -81,6 +86,22 @@ struct SignUpView: View {
                     .padding(.horizontal, 20)
                     
                     Spacer()
+                    
+                    HStack {
+                        Spacer()
+                        
+                        Button(action: {
+                            // Kayıt ekranına yönlendirme
+                        }) {
+                            Text("Alreedy have an account? Login")
+                                .font(.footnote)
+                                .foregroundColor(.black)
+                                .underline()
+                        }
+                        .padding(.horizontal, 30)
+                        .padding(.bottom, 20)
+                    }
+
 
                 }
         }

@@ -26,6 +26,11 @@ struct LoginView: View {
                         .scaledToFit()
                         .frame(width: 150, height: 150)
                         .padding(.top, 80)
+                    
+                    Text("Hey! Welcome back.")
+                        .font(.title)
+                        .bold()
+                        .fontDesign(.serif)
                 
                     
                     VStack(spacing: 15) {
@@ -85,7 +90,7 @@ struct LoginView: View {
                             Text("Don't have an account? Sign up")
                                 .font(.footnote)
                                 .foregroundColor(.black)
-                                .underline() // Altı çizili
+                                .underline()
                         }
                         .padding(.horizontal, 30)
                         .padding(.bottom, 20)
