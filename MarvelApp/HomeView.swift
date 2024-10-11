@@ -24,6 +24,7 @@ struct HomeView: View {
                         Text("Welcome to Marvel Cinematic Universe ⚡️")
                             .font(.custom("Copperplate", fixedSize: 28))
                             .bold()
+                            .padding()
                         
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(0..<10) { index in
@@ -33,6 +34,8 @@ struct HomeView: View {
                         .padding()
                     }
                 }
+                .preferredColorScheme(.dark)
+                .statusBarHidden()
             }
         }
         .navigationTitle("Home")

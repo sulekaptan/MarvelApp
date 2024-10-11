@@ -28,7 +28,20 @@ struct TabBarView: View {
                     Text("Profile")
                 }
         }
-        .accentColor(Color("primaryColor"))
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor(named: "bgColor")
+            
+            appearance.stackedLayoutAppearance.normal.iconColor = .white
+            appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+                    
+            appearance.stackedLayoutAppearance.selected.iconColor = UIColor(Color.black)
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(Color.black)]
+                
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
 

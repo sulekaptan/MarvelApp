@@ -22,6 +22,7 @@ struct MainCard: View {
                     .padding(.bottom, 16)
                     .padding(.horizontal, 8)
                     .multilineTextAlignment(.center)
+                    .foregroundColor(.black)
             }
             .background(Color.white)
             .shadow(radius: 8)
