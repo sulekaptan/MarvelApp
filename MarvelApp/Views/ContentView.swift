@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var backgroundColor: Color = Color(UIColor(named: "bgColor")!)
     
     @State private var isAnimating = false
     @State private var isActive = false
@@ -20,8 +19,8 @@ struct ContentView: View {
         }
         else {
             ZStack {
-                backgroundColor
-                    .edgesIgnoringSafeArea(.all)
+                Color(UIColor(named: "bgColor")!)
+                    .ignoresSafeArea()
             
                 VStack {
                     Spacer()

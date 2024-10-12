@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var backgroundColor: Color = Color(UIColor(named: "bgColor")!)
 
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     
@@ -16,9 +15,8 @@ struct HomeView: View {
         NavigationStack {
             ScrollView {
                 ZStack {
-                    backgroundColor
+                    Color(UIColor(named: "bgColor")!)
                         .ignoresSafeArea()
-//                        .edgesIgnoringSafeArea(.all)
                     
                     VStack{
                         Text("Welcome to Marvel Cinematic Universe ⚡️")
@@ -28,7 +26,9 @@ struct HomeView: View {
                         
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(0..<10) { index in
-                                MainCard()
+                                NavigationLink(destination: CharactersView()) {
+                                    MainCard(imageName: "images", title: "CHARACTERS", imageWidth: 150, imageHeight: 150, cardWidth: 150, cardHeight: 180, textSize: 18)
+                                                                }
                             }
                         }
                         .padding()

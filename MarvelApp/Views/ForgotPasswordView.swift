@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ForgotPasswordView: View {
-    @State private var backgroundColor: Color = Color(UIColor(named: "bgColor")!)
     
     @State private var email: String = ""
     @State private var showAlert = false
@@ -16,8 +15,8 @@ struct ForgotPasswordView: View {
     
     var body: some View {
         ZStack {
-            backgroundColor
-                .edgesIgnoringSafeArea(.all)
+            Color(UIColor(named: "bgColor")!)
+                .ignoresSafeArea()
             
             VStack(spacing: 20) {
                 Image(systemName: "lock.rotation")

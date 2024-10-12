@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var backgroundColor: Color = Color(UIColor(named: "bgColor")!)
 
     @State private var email: String = ""
     @State private var password: String = ""
@@ -18,8 +17,8 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            backgroundColor
-                .edgesIgnoringSafeArea(.all)
+            Color(UIColor(named: "bgColor")!)
+                .ignoresSafeArea()
             
                 VStack (spacing: 30) {
                     Image("marvel")

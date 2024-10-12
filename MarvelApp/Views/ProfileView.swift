@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var backgroundColor: Color = Color(UIColor(named: "bgColor")!)
  
     var body: some View {
         ZStack {
-            backgroundColor
-                .edgesIgnoringSafeArea(.all)
+            Color(UIColor(named: "bgColor")!)
+                .ignoresSafeArea()
             
+            Text("PROFILE")
+                .font(.custom("Copperplate", fixedSize: 30))
+                .bold()
+                .foregroundColor(.white)
             
         }
     }

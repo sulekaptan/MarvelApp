@@ -14,6 +14,9 @@
 		E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B31A2CB70E49000A655F /* FavoritesView.swift */; };
 		E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D65082CB441F3004232C1 /* SignUpView.swift */; };
 		E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FE9D22CB1D31F00770ACC /* LoginView.swift */; };
+		E47670352CB9C826009288D9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670342CB9C826009288D9 /* CharactersView.swift */; };
+		E47670372CB9D885009288D9 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670362CB9D885009288D9 /* CharacterDetailView.swift */; };
+		E47670392CB9D90A009288D9 /* ComicsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670382CB9D90A009288D9 /* ComicsDetailView.swift */; };
 		E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A878542CB7204D00E31A83 /* MainCard.swift */; };
 		E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93672CB00414006483CD /* MarvelAppApp.swift */; };
 		E4AD936A2CB00414006483CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93692CB00414006483CD /* ContentView.swift */; };
@@ -29,6 +32,9 @@
 		E433B31A2CB70E49000A655F /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		E44D65082CB441F3004232C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E46FE9D22CB1D31F00770ACC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E47670342CB9C826009288D9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		E47670362CB9D885009288D9 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		E47670382CB9D90A009288D9 /* ComicsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailView.swift; sourceTree = "<group>"; };
 		E4A878542CB7204D00E31A83 /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
 		E4AD93642CB00414006483CD /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AD93672CB00414006483CD /* MarvelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelAppApp.swift; sourceTree = "<group>"; };
@@ -48,6 +54,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E45BDE0C2CBAED4C00DEA673 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E4AD936B2CB00415006483CD /* Assets.xcassets */,
+				E4AD93672CB00414006483CD /* MarvelAppApp.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		E45BDE0D2CBAED8200DEA673 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E433B3162CB70C0A000A655F /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E45BDE0E2CBAED9700DEA673 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4AD93692CB00414006483CD /* ContentView.swift */,
+				E46FE9D22CB1D31F00770ACC /* LoginView.swift */,
+				E44D65082CB441F3004232C1 /* SignUpView.swift */,
+				E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */,
+				E433B3142CB6FE8F000A655F /* HomeView.swift */,
+				E47670342CB9C826009288D9 /* CharactersView.swift */,
+				E47670362CB9D885009288D9 /* CharacterDetailView.swift */,
+				E47670382CB9D90A009288D9 /* ComicsDetailView.swift */,
+				E433B31A2CB70E49000A655F /* FavoritesView.swift */,
+				E433B3182CB70E3E000A655F /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E45BDE0F2CBAEDCB00DEA673 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E4A878542CB7204D00E31A83 /* MainCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E4AD935B2CB00414006483CD = {
 			isa = PBXGroup;
 			children = (
@@ -67,18 +115,11 @@
 		E4AD93662CB00414006483CD /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
-				E4AD93672CB00414006483CD /* MarvelAppApp.swift */,
-				E4AD93692CB00414006483CD /* ContentView.swift */,
-				E46FE9D22CB1D31F00770ACC /* LoginView.swift */,
-				E44D65082CB441F3004232C1 /* SignUpView.swift */,
-				E433B3122CB6BE2E000A655F /* ForgotPasswordView.swift */,
-				E4AD936B2CB00415006483CD /* Assets.xcassets */,
-				E433B3142CB6FE8F000A655F /* HomeView.swift */,
+				E45BDE0E2CBAED9700DEA673 /* Views */,
+				E45BDE0F2CBAEDCB00DEA673 /* Components */,
+				E45BDE0D2CBAED8200DEA673 /* TabBar */,
+				E45BDE0C2CBAED4C00DEA673 /* App */,
 				E4AD936D2CB00415006483CD /* Preview Content */,
-				E433B3162CB70C0A000A655F /* TabBarView.swift */,
-				E433B3182CB70E3E000A655F /* ProfileView.swift */,
-				E433B31A2CB70E49000A655F /* FavoritesView.swift */,
-				E4A878542CB7204D00E31A83 /* MainCard.swift */,
 			);
 			path = MarvelApp;
 			sourceTree = "<group>";
@@ -164,9 +205,12 @@
 				E433B3192CB70E3E000A655F /* ProfileView.swift in Sources */,
 				E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
+				E47670372CB9D885009288D9 /* CharacterDetailView.swift in Sources */,
 				E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */,
 				E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */,
+				E47670392CB9D90A009288D9 /* ComicsDetailView.swift in Sources */,
 				E4AD936A2CB00414006483CD /* ContentView.swift in Sources */,
+				E47670352CB9C826009288D9 /* CharactersView.swift in Sources */,
 				E433B3152CB6FE8F000A655F /* HomeView.swift in Sources */,
 				E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */,
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
