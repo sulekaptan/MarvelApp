@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isAnimating = false
     @State private var isActive = false
     
     var body: some View {
@@ -18,33 +17,7 @@ struct ContentView: View {
             LoginView()
         }
         else {
-            ZStack {
-                Color(UIColor(named: "bgColor")!)
-                    .ignoresSafeArea()
-            
-                VStack {
-                    Spacer()
-                    
-                    Image("marvel")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 300, height: 200)
-                            .scaleEffect(isAnimating ? 1.5 : 1.0)
-                            .onAppear() {
-                                withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
-                                    self.isAnimating = true
-                                }
-                            }
-                    
-                    Spacer()
-                    
-                    Text("Powered by Şule Kaptan\n Version 1.0")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .multilineTextAlignment(.center)
-                }
-            }
+            SplashView()
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     withAnimation {

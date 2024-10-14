@@ -29,6 +29,7 @@
 		E47670352CB9C826009288D9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670342CB9C826009288D9 /* CharactersView.swift */; };
 		E47670372CB9D885009288D9 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670362CB9D885009288D9 /* CharacterDetailView.swift */; };
 		E47670392CB9D90A009288D9 /* ComicsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670382CB9D90A009288D9 /* ComicsDetailView.swift */; };
+		E4A26F112CBD43E40050A08F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A26F102CBD43E40050A08F /* SplashView.swift */; };
 		E4A68ED52CBB237D00590529 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A68ED42CBB237D00590529 /* SignupViewModel.swift */; };
 		E4A68ED72CBB265900590529 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A68ED62CBB265900590529 /* AppState.swift */; };
 		E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A878542CB7204D00E31A83 /* MainCard.swift */; };
@@ -52,6 +53,7 @@
 		E47670342CB9C826009288D9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		E47670362CB9D885009288D9 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		E47670382CB9D90A009288D9 /* ComicsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailView.swift; sourceTree = "<group>"; };
+		E4A26F102CBD43E40050A08F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		E4A68ED42CBB237D00590529 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		E4A68ED62CBB265900590529 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		E4A878542CB7204D00E31A83 /* MainCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCard.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				E4AD936B2CB00415006483CD /* Assets.xcassets */,
 				E4AD93672CB00414006483CD /* MarvelAppApp.swift */,
+				E45BDE132CBB0D8700DEA673 /* AppDelegate.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -102,6 +105,7 @@
 		E45BDE0E2CBAED9700DEA673 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E4A26F102CBD43E40050A08F /* SplashView.swift */,
 				E4AD93692CB00414006483CD /* ContentView.swift */,
 				E46FE9D22CB1D31F00770ACC /* LoginView.swift */,
 				E44D65082CB441F3004232C1 /* SignUpView.swift */,
@@ -124,6 +128,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		E4A26F122CBD5C450050A08F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E4A68ED42CBB237D00590529 /* SignupViewModel.swift */,
+				E45BDE2B2CBB174E00DEA673 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E4AD935B2CB00414006483CD = {
 			isa = PBXGroup;
 			children = (
@@ -143,15 +156,13 @@
 		E4AD93662CB00414006483CD /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4A26F122CBD5C450050A08F /* ViewModels */,
 				E45BDE0E2CBAED9700DEA673 /* Views */,
 				E45BDE0F2CBAEDCB00DEA673 /* Components */,
 				E45BDE0D2CBAED8200DEA673 /* TabBar */,
 				E45BDE0C2CBAED4C00DEA673 /* App */,
 				E4AD936D2CB00415006483CD /* Preview Content */,
-				E45BDE132CBB0D8700DEA673 /* AppDelegate.swift */,
 				E45BDE292CBB14BA00DEA673 /* GoogleService-Info.plist */,
-				E45BDE2B2CBB174E00DEA673 /* LoginViewModel.swift */,
-				E4A68ED42CBB237D00590529 /* SignupViewModel.swift */,
 				E4A68ED62CBB265900590529 /* AppState.swift */,
 			);
 			path = MarvelApp;
@@ -267,6 +278,7 @@
 				E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */,
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
 				E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */,
+				E4A26F112CBD43E40050A08F /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
