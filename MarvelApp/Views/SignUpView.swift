@@ -15,6 +15,10 @@ struct SignUpView: View {
     @State private var showAlert = false
     @State private var alertMessage = ""
     
+    private var signupViewModel = SignupViewModel()
+    
+    @FocusState private var fieldIsFocused: Bool
+    
     var body: some View {
         ZStack {
             Color(UIColor(named: "bgColor")!)
@@ -46,7 +50,7 @@ struct SignUpView: View {
                             .background(Color.white.opacity(1))
                             .cornerRadius(50)
                         
-                        SecureField("Verify password", text: $confirmPassword)
+                        SecureField("Verify password", text: $confirmPassword).focused($fieldIsFocused)
                             .padding()
                             .background(Color.white.opacity(1))
                             .cornerRadius(50)
@@ -56,7 +60,24 @@ struct SignUpView: View {
                  
                     VStack(spacing: 15) {
                         Button(action: {
-                            //Login
+                            guard password == confirmPassword else {
+                                alertMessage = "Passwords do not match. Please try again."
+                                showAlert = true
+                                return
+                            }
+                            
+                            signupViewModel.signUp(email: email, password: password) { result in
+                                switch result {
+                                case .success(_):
+                                    alertMessage = "Sign up successfull."
+                                    showAlert = true
+                                case .failure(let failure):
+                                    alertMessage = failure.localizedDescription
+                                    showAlert = true
+                                }
+                            }
+                            
+                            fieldIsFocused = false
                         }) {
                             Text("Sign up")
                                 .frame(maxWidth: .infinity)
@@ -67,7 +88,7 @@ struct SignUpView: View {
                         }
                         .padding(.horizontal, 50)
                         .alert(isPresented: $showAlert) {
-                            Alert(title: Text("ERROR"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                            Alert(title: Text("ALERT"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                         }
                             
                         Button(action: {

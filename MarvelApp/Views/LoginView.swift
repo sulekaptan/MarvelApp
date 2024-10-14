@@ -13,7 +13,11 @@ struct LoginView: View {
     @State private var password: String = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
-
+    
+    private var loginViewModel = LoginViewModel()
+    
+    @FocusState private var fieldIsFocused: Bool
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -41,7 +45,7 @@ struct LoginView: View {
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(.none)
                             
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $password).focused($fieldIsFocused)
                                 .padding()
                                 .background(Color.white.opacity(1))
                                 .cornerRadius(50)
@@ -53,7 +57,6 @@ struct LoginView: View {
                                     Text("Forgot password?")
                                         .font(.footnote)
                                         .foregroundColor(.black)
-//                                        .underline()
                                 }
                                 .padding(.horizontal, 30)
                             }
@@ -63,7 +66,17 @@ struct LoginView: View {
                      
                         VStack(spacing: 15) {
                             Button(action: {
-                                //Login
+                                loginViewModel.login(email: email, password: password) { result in
+                                    switch result {
+                                    case .success(_):
+                                        alertMessage = "Login successfull."
+                                        showAlert = true
+                                    case .failure(let failure):
+                                        alertMessage = failure.localizedDescription
+                                        showAlert = true
+                                    }
+                                }
+                                fieldIsFocused = false
                             }) {
                                 Text("Login")
                                     .frame(maxWidth: .infinity)
@@ -74,7 +87,7 @@ struct LoginView: View {
                             }
                             .padding(.horizontal, 50)
                             .alert(isPresented: $showAlert) {
-                                Alert(title: Text("ERROR"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                                Alert(title: Text("ALERT"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                             }
                                 
                             Button(action: {
