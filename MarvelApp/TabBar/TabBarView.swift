@@ -22,10 +22,10 @@ struct TabBarView: View {
                     Text("Favorites")
                 }
             
-            ProfileView()
+            SettingsView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
+                    Image(systemName: "gear")
+                    Text("Settings")
                 }
         }
         .onAppear {

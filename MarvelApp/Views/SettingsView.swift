@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct SettingsView: View {
  
     var body: some View {
         ZStack {
             Color(UIColor(named: "bgColor")!)
                 .ignoresSafeArea()
             
-            Text("PROFILE")
+            Text("SETTINGS")
                 .font(.custom("Copperplate", fixedSize: 30))
                 .bold()
                 .foregroundColor(.white)
@@ -23,8 +23,8 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        SettingsView()
     }
 }
