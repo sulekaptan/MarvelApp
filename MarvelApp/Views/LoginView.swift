@@ -18,6 +18,8 @@ struct LoginView: View {
     
     @FocusState private var fieldIsFocused: Bool
     
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -71,6 +73,7 @@ struct LoginView: View {
                                     case .success(_):
                                         alertMessage = "Login successfull."
                                         showAlert = true
+                                        appState.isUserLoggedIn = true
                                     case .failure(let failure):
                                         alertMessage = failure.localizedDescription
                                         showAlert = true

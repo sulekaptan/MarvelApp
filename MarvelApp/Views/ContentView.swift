@@ -9,21 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isActive = false
+    @State private var showSplash = true
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         
-        if isActive{
-            LoginView()
-        }
-        else {
+        if showSplash {
             SplashView()
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                    withAnimation {
-                        self.isActive = true
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        withAnimation {
+                            self.showSplash = false
+                        }
                     }
                 }
+        } else {
+            if appState.isUserLoggedIn {
+                TabBarView()
+            } else {
+                LoginView()
             }
         }
     }

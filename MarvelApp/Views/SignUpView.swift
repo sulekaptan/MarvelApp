@@ -19,6 +19,8 @@ struct SignUpView: View {
     
     @FocusState private var fieldIsFocused: Bool
     
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
         ZStack {
             Color(UIColor(named: "bgColor")!)
@@ -71,6 +73,7 @@ struct SignUpView: View {
                                 case .success(_):
                                     alertMessage = "Sign up successfull."
                                     showAlert = true
+                                    appState.isUserLoggedIn = true
                                 case .failure(let failure):
                                     alertMessage = failure.localizedDescription
                                     showAlert = true

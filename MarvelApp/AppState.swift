@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import SwiftUI
 
 class AppState: ObservableObject {
     @Published var isUserLoggedIn: Bool = false
