@@ -15,6 +15,7 @@ struct CharacterDetailView: View {
     let characterPowers: [String]
     let characterOrigin: String
     
+    @State private var isFavorite = false
     
     var body: some View {
         NavigationStack {
@@ -108,8 +109,16 @@ struct CharacterDetailView: View {
                             .foregroundColor(.white)
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isFavorite.toggle()
+                    }) {
+                        Image(systemName: isFavorite ? "heart.fill" : "heart")
+                            .foregroundColor(isFavorite ? .black : .white)
+                    }
+                }
             }
-//            .navigationTitle("Character Detail")
         }
     }
 }
