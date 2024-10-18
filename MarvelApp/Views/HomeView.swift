@@ -13,34 +13,44 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
                 ZStack {
                     Color(UIColor(named: "bgColor")!)
                         .ignoresSafeArea()
                     
-                    VStack{
-                        Text("Welcome to Marvel Cinematic Universe ⚡️")
-                            .font(.custom("Copperplate", fixedSize: 28))
-                            .bold()
-                            .padding()
-                        
-                        LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(0..<10) { index in
-                                NavigationLink(destination: CharactersView()) {
-                                    MainCard(imageName: "images", title: "CHARACTERS", imageWidth: 150, imageHeight: 150, cardWidth: 150, cardHeight: 180, textSize: 18)
-                                                                }
+                    ScrollView {
+                        VStack{
+                            LazyVGrid(columns: columns, spacing: 20) {
+                                ForEach(0..<10) { index in
+                                    NavigationLink(destination: CharactersView()) {
+                                        MainCard(imageName: "images", title: "CHARACTERS", imageWidth: 150, imageHeight: 150, cardWidth: 150, cardHeight: 180, textSize: 18)
+                                    }
+                                }
                             }
+                            .padding()
                         }
-                        .padding()
                     }
                 }
-                .preferredColorScheme(.dark)
-                .statusBarHidden()
-            }
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        VStack {
+                            Text("Marvel Cinematic Universe ⚡️")
+                                .font(.custom("Copperplate", fixedSize:20))
+                                .bold()
+                                .foregroundColor(.black)
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "moon.fill")
+                                .foregroundColor(Color.primary)
+                        }
+                    }
+                }
         }
-        .navigationTitle("Home")
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {

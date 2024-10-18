@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    @State private var showingAboutAppPopover = false
+    @State private var showingFeedbackPopover = false
  
     var body: some View {
         NavigationStack {
@@ -21,10 +27,10 @@ struct SettingsView: View {
                             //
                         }) {
                             HStack {
-                                Image(systemName: "paintbrush.fill")
+                                Image(systemName: "bubble.left.and.bubble.right.fill")
                                     .foregroundColor(.black)
                                 
-                                Text("Change theme")
+                                Text("Change language")
                                     .font(.custom("Copperplate", fixedSize: 18))
                                     .foregroundColor(.black)
                             }
@@ -46,7 +52,7 @@ struct SettingsView: View {
                         .listRowBackground(Color.clear)
                         
                         Button(action: {
-                            //
+                            showingAboutAppPopover = true
                         }) {
                             HStack {
                                 Image(systemName: "info.circle.fill")
@@ -57,10 +63,13 @@ struct SettingsView: View {
                                     .foregroundColor(.black)
                             }
                         }
+                        .popover(isPresented: $showingAboutAppPopover) {
+                            AboutAppPopoverViews()
+                        }
                         .listRowBackground(Color.clear)
                         
                         Button(action: {
-                            //
+                            showingFeedbackPopover = true
                         }) {
                             HStack {
                                 Image(systemName: "envelope.fill")
@@ -71,10 +80,14 @@ struct SettingsView: View {
                                     .foregroundColor(.black)
                             }
                         }
+                        .popover(isPresented: $showingFeedbackPopover) {
+                            FeedbackPopoverView()
+                        }
                         .listRowBackground(Color.clear)
                         
                         Button(action: {
-                            //
+                            alertMessage = "Are you sure you want to log out?"
+                            showAlert = true
                         }) {
                             HStack {
                                 Image(systemName: "arrow.backward.circle.fill")
@@ -85,10 +98,19 @@ struct SettingsView: View {
                                     .foregroundColor(.black)
                             }
                         }
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text("WARNING!"), message: Text(alertMessage), primaryButton: .destructive(Text("Log Out")) {
+                                //
+                            },
+                            secondaryButton: .cancel(Text("Cancel")) {
+                                //
+                            })
+                        }
                         .listRowBackground(Color.clear)
                         
                         Button(action: {
-                            //
+                            alertMessage = "Are you sure you want to delete your account?"
+                            showAlert = true
                         }) {
                             HStack {
                                 Image(systemName: "trash.fill")
@@ -98,6 +120,14 @@ struct SettingsView: View {
                                     .font(.custom("Copperplate", fixedSize: 18))
                                     .foregroundColor(.black)
                             }
+                        }
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text("WARNING!"), message: Text(alertMessage), primaryButton: .destructive(Text("Delete")) {
+                                //
+                            },
+                            secondaryButton: .cancel(Text("Cancel")) {
+                                //
+                            })
                         }
                         .listRowBackground(Color.clear)
                     }

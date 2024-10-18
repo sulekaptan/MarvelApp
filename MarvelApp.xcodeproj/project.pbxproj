@@ -37,6 +37,9 @@
 		E4AD936A2CB00414006483CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93692CB00414006483CD /* ContentView.swift */; };
 		E4AD936C2CB00415006483CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936B2CB00415006483CD /* Assets.xcassets */; };
 		E4AD936F2CB00415006483CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936E2CB00415006483CD /* Preview Assets.xcassets */; };
+		E4C842322CC2808A00DFEC0E /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842312CC2808A00DFEC0E /* CharacterModel.swift */; };
+		E4C842342CC292FB00DFEC0E /* FeedbackPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */; };
+		E4C842372CC2946F00DFEC0E /* AboutAppPopoverViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		E4AD93692CB00414006483CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4AD936B2CB00415006483CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4AD936E2CB00415006483CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4C842312CC2808A00DFEC0E /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPopoverView.swift; sourceTree = "<group>"; };
+		E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppPopoverViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		E47415E12CC197BE00955282 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4C842312CC2808A00DFEC0E /* CharacterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E4A26F122CBD5C450050A08F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +170,8 @@
 		E4AD93662CB00414006483CD /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4C842352CC293F300DFEC0E /* PopoverViews */,
+				E47415E12CC197BE00955282 /* Models */,
 				E4A26F122CBD5C450050A08F /* ViewModels */,
 				E45BDE0E2CBAED9700DEA673 /* Views */,
 				E45BDE0F2CBAEDCB00DEA673 /* Components */,
@@ -174,6 +190,15 @@
 				E4AD936E2CB00415006483CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4C842352CC293F300DFEC0E /* PopoverViews */ = {
+			isa = PBXGroup;
+			children = (
+				E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */,
+				E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */,
+			);
+			path = PopoverViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +291,7 @@
 				E4A68ED52CBB237D00590529 /* SignupViewModel.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
 				E47670372CB9D885009288D9 /* CharacterDetailView.swift in Sources */,
+				E4C842322CC2808A00DFEC0E /* CharacterModel.swift in Sources */,
 				E45BDE142CBB0D8700DEA673 /* AppDelegate.swift in Sources */,
 				E4A68ED72CBB265900590529 /* AppState.swift in Sources */,
 				E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */,
@@ -274,11 +300,13 @@
 				E45BDE2C2CBB174E00DEA673 /* LoginViewModel.swift in Sources */,
 				E4AD936A2CB00414006483CD /* ContentView.swift in Sources */,
 				E47670352CB9C826009288D9 /* CharactersView.swift in Sources */,
+				E4C842372CC2946F00DFEC0E /* AboutAppPopoverViews.swift in Sources */,
 				E433B3152CB6FE8F000A655F /* HomeView.swift in Sources */,
 				E433B3132CB6BE2E000A655F /* ForgotPasswordView.swift in Sources */,
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
 				E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */,
 				E4A26F112CBD43E40050A08F /* SplashView.swift in Sources */,
+				E4C842342CC292FB00DFEC0E /* FeedbackPopoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
