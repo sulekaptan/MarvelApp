@@ -37,9 +37,12 @@
 		E4AD936A2CB00414006483CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93692CB00414006483CD /* ContentView.swift */; };
 		E4AD936C2CB00415006483CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936B2CB00415006483CD /* Assets.xcassets */; };
 		E4AD936F2CB00415006483CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936E2CB00415006483CD /* Preview Assets.xcassets */; };
-		E4C842322CC2808A00DFEC0E /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842312CC2808A00DFEC0E /* CharacterModel.swift */; };
+		E4C842322CC2808A00DFEC0E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842312CC2808A00DFEC0E /* Character.swift */; };
 		E4C842342CC292FB00DFEC0E /* FeedbackPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */; };
 		E4C842372CC2946F00DFEC0E /* AboutAppPopoverViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */; };
+		E4D8FE2F2CC2E9DE00EC2C47 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8FE2E2CC2E9DE00EC2C47 /* CharacterViewModel.swift */; };
+		E4D8FE352CC2F40300EC2C47 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8FE342CC2F40300EC2C47 /* API.swift */; };
+		E4DFF7B72CC834FB000BF7F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +68,12 @@
 		E4AD93692CB00414006483CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4AD936B2CB00415006483CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4AD936E2CB00415006483CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E4C842312CC2808A00DFEC0E /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		E4C842312CC2808A00DFEC0E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPopoverView.swift; sourceTree = "<group>"; };
 		E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppPopoverViews.swift; sourceTree = "<group>"; };
+		E4D8FE2E2CC2E9DE00EC2C47 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		E4D8FE342CC2F40300EC2C47 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +143,7 @@
 		E47415E12CC197BE00955282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E4C842312CC2808A00DFEC0E /* CharacterModel.swift */,
+				E4C842312CC2808A00DFEC0E /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 			children = (
 				E4A68ED42CBB237D00590529 /* SignupViewModel.swift */,
 				E45BDE2B2CBB174E00DEA673 /* LoginViewModel.swift */,
+				E4D8FE2E2CC2E9DE00EC2C47 /* CharacterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +177,8 @@
 		E4AD93662CB00414006483CD /* MarvelApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4D8FE332CC2F3F700EC2C47 /* Config */,
+				E4D8FE302CC2F39A00EC2C47 /* Service */,
 				E4C842352CC293F300DFEC0E /* PopoverViews */,
 				E47415E12CC197BE00955282 /* Models */,
 				E4A26F122CBD5C450050A08F /* ViewModels */,
@@ -199,6 +208,22 @@
 				E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */,
 			);
 			path = PopoverViews;
+			sourceTree = "<group>";
+		};
+		E4D8FE302CC2F39A00EC2C47 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E4D8FE332CC2F3F700EC2C47 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E4D8FE342CC2F40300EC2C47 /* API.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,12 +316,14 @@
 				E4A68ED52CBB237D00590529 /* SignupViewModel.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
 				E47670372CB9D885009288D9 /* CharacterDetailView.swift in Sources */,
-				E4C842322CC2808A00DFEC0E /* CharacterModel.swift in Sources */,
+				E4C842322CC2808A00DFEC0E /* Character.swift in Sources */,
+				E4D8FE2F2CC2E9DE00EC2C47 /* CharacterViewModel.swift in Sources */,
 				E45BDE142CBB0D8700DEA673 /* AppDelegate.swift in Sources */,
 				E4A68ED72CBB265900590529 /* AppState.swift in Sources */,
 				E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */,
 				E4A878552CB7204D00E31A83 /* MainCard.swift in Sources */,
 				E47670392CB9D90A009288D9 /* ComicsDetailView.swift in Sources */,
+				E4DFF7B72CC834FB000BF7F7 /* NetworkManager.swift in Sources */,
 				E45BDE2C2CBB174E00DEA673 /* LoginViewModel.swift in Sources */,
 				E4AD936A2CB00414006483CD /* ContentView.swift in Sources */,
 				E47670352CB9C826009288D9 /* CharactersView.swift in Sources */,
@@ -306,6 +333,7 @@
 				E4AD93682CB00414006483CD /* MarvelAppApp.swift in Sources */,
 				E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */,
 				E4A26F112CBD43E40050A08F /* SplashView.swift in Sources */,
+				E4D8FE352CC2F40300EC2C47 /* API.swift in Sources */,
 				E4C842342CC292FB00DFEC0E /* FeedbackPopoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,10 @@ import SwiftUI
 
 struct FavoritesView: View {
 
-    @State private var favoriteCharacters: [Character] = [
-        Character(name: "Iron Man", image: "char"),
-        Character(name: "Spider-Man", image: "char"),
-        Character(name: "Thor", image: "char")
+    @State private var favoriteCharacters: [CharacterFav] = [
+        CharacterFav(name: "Iron Man", image: "char"),
+        CharacterFav(name: "Spider-Man", image: "char"),
+        CharacterFav(name: "Thor", image: "char")
     ]
     
     var body: some View {
@@ -76,7 +76,7 @@ struct FavoritesView: View {
     }
 }
 
-struct Character: Identifiable {
+struct CharacterFav: Identifiable {
     let id = UUID()
     let name: String
     let image: String
