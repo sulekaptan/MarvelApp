@@ -31,7 +31,7 @@ struct Thumbnail: Codable, Hashable {
     let xtension: String
 
     var fullPath: String {
-        return "https://\(path).\(xtension)"
+        return "\(path).\(xtension)"
     }
 
     enum CodingKeys: String, CodingKey {

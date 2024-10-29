@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+//import Kingfisher
 
 struct CharactersView: View {
     
@@ -15,15 +16,15 @@ struct CharactersView: View {
     
     let columns = [GridItem(.adaptive(minimum:90), spacing: 5)]
     
-    let characters = ["Iron Man", "Captain America", "Thor", "Black Widow", "Hulk", "Hawkeye", "Spider-Man", "Doctor Strange", "Scarlet Witch", "Black Panther", "Ant-Man", "Vision"]
-        
-        var filteredCharacters: [String] {
-            if searchText.isEmpty {
-                return characters
-            } else {
-                return characters.filter { $0.localizedCaseInsensitiveContains(searchText) }
-            }
-        }
+//    let characters = ["Iron Man", "Captain America", "Thor", "Black Widow", "Hulk", "Hawkeye", "Spider-Man", "Doctor Strange", "Scarlet Witch", "Black Panther", "Ant-Man", "Vision"]
+//
+//        var filteredCharacters: [String] {
+//            if searchText.isEmpty {
+//                return characters
+//            } else {
+//                return characters.filter { $0.localizedCaseInsensitiveContains(searchText) }
+//            }
+//        }
     
     var body: some View {
         NavigationStack {
@@ -35,14 +36,19 @@ struct CharactersView: View {
                     VStack {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(characterViewModel.characters, id: \.self) { character in
-                            NavigationLink(destination: CharacterDetailView(characterName: "Iron Man",
-                                                                            characterDescription: "Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.",
-                                                                            characterImage: "char",
-                                                                            characterMovies: ["Iron Man (2008)", "The Avengers (2012)", "Iron Man 3 (2013)"],
+                                NavigationLink(destination: CharacterDetailView(characterName: character.name,
+                                                                                characterDescription: character.description,
+                                                                                characterImage: "\(character.thumbnail.fullPath)",
+                                                                                characterMovies: character.comics.items.map { $0.name },
                                                                             characterPowers: ["Genius-level intellect", "Powered armor suit", "Expert engineer and combatant"],
                                                                             characterOrigin: "Long Island, New York")) {
-                                MainCard(imageName: "char", title: character.name, imageWidth:90, imageHeight: 90, cardWidth: 110, cardHeight: 150, textSize: 13)
+                                MainCard(imageName: character.thumbnail.fullPath, title: character.name, imageWidth:90, imageHeight: 90, cardWidth: 110, cardHeight: 150, textSize: 13)
                             }
+                            .onAppear {
+                                    if character == characterViewModel.characters.last {
+                                        characterViewModel.getCharacters()
+                                    }
+                                }
                             }
                         }
                         .padding()

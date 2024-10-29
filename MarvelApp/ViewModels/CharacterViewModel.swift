@@ -9,24 +9,26 @@ import Foundation
 import Combine
 
 class CharacterViewModel: ObservableObject {
-//    @Published var characters: [Character] = [
-//            Character(id: 1, name: "Iron Man", description: "", thumbnail: Thumbnail(path: "", xtension: ""), comics: ComicData(available: 0, items: [])),
-//            Character(id: 2, name: "Captain America", description: "", thumbnail: Thumbnail(path: "", xtension: ""), comics: ComicData(available: 0, items: []))
-//            // Diğer karakterler...
-//        ]
     @Published var characters: [Character] = []
-    
+    private var isLoading = false
+    private var offset = 0
+    private let limit = 54
+
     func getCharacters() {
-           NetworkManager.shared.getCharacters {result in
-               DispatchQueue.main.async {
-                   switch result {
-                       case .success(let characters):
-                           self.characters = characters
-                       case .failure(let error):
-                           print("Error fetching characters: \(error)")
-                   }
-               }
-               
-           }
-       }
+        guard !isLoading else { return }
+        isLoading = true
+        
+        NetworkManager.shared.getCharacters(offset: offset, limit: limit) { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let newCharacters):
+                    self?.characters.append(contentsOf: newCharacters) 
+                    self?.offset += self?.limit ?? 20
+                case .failure(let error):
+                    print("Karakterler alınırken hata oluştu: \(error)")
+                }
+                self?.isLoading = false
+            }
+        }
+    }
 }

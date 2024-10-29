@@ -21,11 +21,13 @@ class NetworkManager {
           return MD5(ts + API.privateKey + API.publicKey) //06BF144298942753410E5916A57FF501
       }
       
-      private var urlString: String {
-          return "\(baseURL)/characters?apikey=\(API.publicKey)&ts=\(ts)&hash=\(hash)"
-      }
+//      private var urlString: String {
+//          return "\(baseURL)/characters?apikey=\(API.publicKey)&ts=\(ts)&hash=\(hash)"
+//      }
     
-    func getCharacters(completion: @escaping (Result<[Character], MarvelError>) -> ()) {
+    func getCharacters(offset: Int, limit: Int, completion: @escaping (Result<[Character], MarvelError>) -> ()) {
+        let urlString = "\(baseURL)/characters?offset=\(offset)&limit=\(limit)&apikey=\(API.publicKey)&ts=\(ts)&hash=\(hash)"
+        
         guard let url = URL(string: urlString) else {
             completion(.failure(.badUrl))
             print("1.hata")

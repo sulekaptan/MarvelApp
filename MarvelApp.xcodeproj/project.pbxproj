@@ -37,12 +37,14 @@
 		E4AD936A2CB00414006483CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD93692CB00414006483CD /* ContentView.swift */; };
 		E4AD936C2CB00415006483CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936B2CB00415006483CD /* Assets.xcassets */; };
 		E4AD936F2CB00415006483CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AD936E2CB00415006483CD /* Preview Assets.xcassets */; };
+		E4B52A712CCED1E200BA713F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E4B52A702CCED1E200BA713F /* SDWebImageSwiftUI */; };
 		E4C842322CC2808A00DFEC0E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842312CC2808A00DFEC0E /* Character.swift */; };
 		E4C842342CC292FB00DFEC0E /* FeedbackPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */; };
 		E4C842372CC2946F00DFEC0E /* AboutAppPopoverViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */; };
 		E4D8FE2F2CC2E9DE00EC2C47 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8FE2E2CC2E9DE00EC2C47 /* CharacterViewModel.swift */; };
 		E4D8FE352CC2F40300EC2C47 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8FE342CC2F40300EC2C47 /* API.swift */; };
 		E4DFF7B72CC834FB000BF7F7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */; };
+		E4F0CF2E2CCD441500D83C41 /* WaveInteractionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F0CF2D2CCD441500D83C41 /* WaveInteractionCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,7 @@
 		E4D8FE2E2CC2E9DE00EC2C47 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		E4D8FE342CC2F40300EC2C47 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E4F0CF2D2CCD441500D83C41 /* WaveInteractionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveInteractionCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4B52A712CCED1E200BA713F /* SDWebImageSwiftUI in Frameworks */,
 				E45BDE1E2CBB112300DEA673 /* FirebaseDatabaseSwift in Frameworks */,
 				E45BDE1C2CBB112300DEA673 /* FirebaseDatabase in Frameworks */,
 				E45BDE182CBB112300DEA673 /* FirebaseAuth in Frameworks */,
@@ -206,6 +210,7 @@
 			children = (
 				E4C842332CC292FB00DFEC0E /* FeedbackPopoverView.swift */,
 				E4C842362CC2946F00DFEC0E /* AboutAppPopoverViews.swift */,
+				E4F0CF2D2CCD441500D83C41 /* WaveInteractionCardView.swift */,
 			);
 			path = PopoverViews;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				E45BDE232CBB112300DEA673 /* FirebaseFirestoreSwift */,
 				E45BDE252CBB112300DEA673 /* FirebaseStorage */,
 				E45BDE272CBB112300DEA673 /* FirebaseStorageCombine-Community */,
+				E4B52A702CCED1E200BA713F /* SDWebImageSwiftUI */,
 			);
 			productName = MarvelApp;
 			productReference = E4AD93642CB00414006483CD /* MarvelApp.app */;
@@ -283,6 +289,7 @@
 			mainGroup = E4AD935B2CB00414006483CD;
 			packageReferences = (
 				E45BDE162CBB112200DEA673 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E4B52A6F2CCED1E200BA713F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = E4AD93652CB00414006483CD /* Products */;
 			projectDirPath = "";
@@ -312,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E433B3192CB70E3E000A655F /* SettingsView.swift in Sources */,
+				E4F0CF2E2CCD441500D83C41 /* WaveInteractionCardView.swift in Sources */,
 				E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */,
 				E4A68ED52CBB237D00590529 /* SignupViewModel.swift in Sources */,
 				E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */,
@@ -545,6 +553,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		E4B52A6F2CCED1E200BA713F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -592,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E45BDE162CBB112200DEA673 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		E4B52A702CCED1E200BA713F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4B52A6F2CCED1E200BA713F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
