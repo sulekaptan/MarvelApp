@@ -12,6 +12,7 @@
 		E433B3172CB70C0A000A655F /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3162CB70C0A000A655F /* TabBarView.swift */; };
 		E433B3192CB70E3E000A655F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B3182CB70E3E000A655F /* SettingsView.swift */; };
 		E433B31B2CB70E49000A655F /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E433B31A2CB70E49000A655F /* FavoritesView.swift */; };
+		E44C401E2CD1714900ED4FB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E44C401D2CD1714900ED4FB3 /* GoogleService-Info.plist */; };
 		E44D65092CB441F3004232C1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D65082CB441F3004232C1 /* SignUpView.swift */; };
 		E45BDE142CBB0D8700DEA673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45BDE132CBB0D8700DEA673 /* AppDelegate.swift */; };
 		E45BDE182CBB112300DEA673 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E45BDE172CBB112300DEA673 /* FirebaseAuth */; };
@@ -23,7 +24,6 @@
 		E45BDE242CBB112300DEA673 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E45BDE232CBB112300DEA673 /* FirebaseFirestoreSwift */; };
 		E45BDE262CBB112300DEA673 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E45BDE252CBB112300DEA673 /* FirebaseStorage */; };
 		E45BDE282CBB112300DEA673 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E45BDE272CBB112300DEA673 /* FirebaseStorageCombine-Community */; };
-		E45BDE2A2CBB14BA00DEA673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E45BDE292CBB14BA00DEA673 /* GoogleService-Info.plist */; };
 		E45BDE2C2CBB174E00DEA673 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45BDE2B2CBB174E00DEA673 /* LoginViewModel.swift */; };
 		E46FE9D32CB1D31F00770ACC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46FE9D22CB1D31F00770ACC /* LoginView.swift */; };
 		E47670352CB9C826009288D9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47670342CB9C826009288D9 /* CharactersView.swift */; };
@@ -53,9 +53,9 @@
 		E433B3162CB70C0A000A655F /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		E433B3182CB70E3E000A655F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E433B31A2CB70E49000A655F /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		E44C401D2CD1714900ED4FB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../app-ss/MarvelApp/MarvelApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E44D65082CB441F3004232C1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		E45BDE132CBB0D8700DEA673 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E45BDE292CBB14BA00DEA673 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E45BDE2B2CBB174E00DEA673 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E46FE9D22CB1D31F00770ACC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E47670342CB9C826009288D9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				E45BDE0D2CBAED8200DEA673 /* TabBar */,
 				E45BDE0C2CBAED4C00DEA673 /* App */,
 				E4AD936D2CB00415006483CD /* Preview Content */,
-				E45BDE292CBB14BA00DEA673 /* GoogleService-Info.plist */,
+				E44C401D2CD1714900ED4FB3 /* GoogleService-Info.plist */,
 				E4A68ED62CBB265900590529 /* AppState.swift */,
 			);
 			path = MarvelApp;
@@ -306,8 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4AD936F2CB00415006483CD /* Preview Assets.xcassets in Resources */,
+				E44C401E2CD1714900ED4FB3 /* GoogleService-Info.plist in Resources */,
 				E4AD936C2CB00415006483CD /* Assets.xcassets in Resources */,
-				E45BDE2A2CBB14BA00DEA673 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

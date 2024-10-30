@@ -28,12 +28,19 @@ struct Character: Codable, Hashable, Identifiable {
 
 struct Thumbnail: Codable, Hashable {
     let path: String
-    let xtension: String
-
-    var fullPath: String {
-        return "\(path).\(xtension)"
-    }
-
+       let xtension: String
+       var fullPath: String {
+           if path.starts(with: "http") {
+               if path.starts(with: "http://") {
+                   let securePath = path.replacingOccurrences(of: "http://", with: "https://")
+                   return "\(securePath).\(xtension)"
+               } else {
+                   return "\(path).\(xtension)"
+               }
+           } else {
+               return "https://\(path).\(xtension)"
+           }
+       }
     enum CodingKeys: String, CodingKey {
         case xtension = "extension"
         case path

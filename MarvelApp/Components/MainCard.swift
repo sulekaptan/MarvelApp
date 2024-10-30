@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainCard: View {
     
-    let imageName: String
+    let imageUrl: String
     let title: String
     let imageWidth: CGFloat
     let imageHeight: CGFloat
@@ -20,10 +20,17 @@ struct MainCard: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 15.0) {
-                Image(imageName)
-                    .resizable()
-                    .frame(width: imageWidth, height: imageHeight)
-                
+                AsyncImage(url: URL(string: imageUrl)) { image in
+                    image
+                        .resizable()
+                        .frame(width: imageWidth, height: imageHeight)
+                } placeholder: {
+                    ProgressView()
+                }
+//                Image(imageUrl)
+//                    .resizable()
+//                    .frame(width: imageWidth, height: imageHeight)
+//
                 Text(title)
                     .font(.custom("Copperplate", fixedSize: textSize))
                     .bold()
@@ -43,6 +50,6 @@ struct MainCard: View {
 
 struct MainCard_Previews: PreviewProvider {
     static var previews: some View {
-        MainCard(imageName: "images", title: "CHARACTERS", imageWidth: 150, imageHeight: 150, cardWidth: 150, cardHeight: 180, textSize: 18)
+        MainCard(imageUrl: "images", title: "CHARACTERS", imageWidth: 150, imageHeight: 150, cardWidth: 150, cardHeight: 180, textSize: 18)
     }
 }

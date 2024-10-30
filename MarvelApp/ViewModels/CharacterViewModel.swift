@@ -12,7 +12,7 @@ class CharacterViewModel: ObservableObject {
     @Published var characters: [Character] = []
     private var isLoading = false
     private var offset = 0
-    private let limit = 54
+    private let limit = 12
 
     func getCharacters() {
         guard !isLoading else { return }

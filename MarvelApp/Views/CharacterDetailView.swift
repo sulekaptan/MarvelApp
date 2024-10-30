@@ -12,8 +12,6 @@ struct CharacterDetailView: View {
     let characterDescription: String
     let characterImage: String
     let characterMovies: [String]
-    let characterPowers: [String]
-    let characterOrigin: String
     
     @State private var isFavorite = false
     
@@ -25,10 +23,14 @@ struct CharacterDetailView: View {
                 
                 ScrollView {
                     VStack {
-                        Image("char")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150)
+                        AsyncImage(url: URL(string: characterImage)) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150, height: 150)
+                        } placeholder: {
+                            ProgressView()
+                        }
                         
                         Text(characterName)
                             .font(.custom("Copperplate", fixedSize: 30))
@@ -41,32 +43,6 @@ struct CharacterDetailView: View {
                             .padding(.horizontal, 20)
                             .padding(.top, 10)
                         
-                        VStack(alignment: .leading) {
-                            Text("Origin")
-                                .font(.custom("Copperplate", fixedSize: 22))
-                                .foregroundColor(.white)
-                                .padding(.top, 20)
-                            
-                            Text(characterOrigin)
-                                .font(.custom("Copperplate", fixedSize: 18))
-                                .foregroundColor(.black)
-                                .padding(.top, 5)
-                        }
-                        .padding(.horizontal, 20)
-                        
-                        VStack(alignment: .leading) {
-                            Text("Powers")
-                                .font(.custom("Copperplate", fixedSize: 22))
-                                .foregroundColor(.white)
-                                .padding(.top, 20)
-                            
-                            ForEach(characterPowers, id: \.self) { power in
-                                Text("• \(power)")
-                                    .font(.custom("Copperplate", fixedSize: 18))
-                                    .foregroundColor(.black)
-                            }
-                        }
-                        .padding(.horizontal, 20)
                         
                         VStack(alignment: .leading) {
                             Text("COMICS")
@@ -77,6 +53,14 @@ struct CharacterDetailView: View {
                             List(characterMovies, id: \.self) { movie in
                                 NavigationLink(destination: ComicsDetailView(comicsName: "IRON MAN", comicsDescription: "Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.", comicsImage: "char")) {
                                         HStack {
+//                                            AsyncImage(url: URL(string: characterImage)) { image in
+//                                                image
+//                                                    .resizable()
+//                                                    .scaledToFit()
+//                                                    .frame(width: 150, height: 150)
+//                                            } placeholder: {
+//                                                ProgressView()
+//                                            }
                                             Image("char")
                                                 .resizable()
                                                 .frame(width: 60, height: 60)
@@ -129,9 +113,7 @@ struct CharacterDetailView_Previews: PreviewProvider {
             characterName: "Iron Man",
             characterDescription: "Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.",
             characterImage: "char",
-            characterMovies: ["Iron Man (2008)", "The Avengers (2012)", "Iron Man 3 (2013)"],
-            characterPowers: ["Genius-level intellect", "Powered armor suit", "Expert engineer and combatant"],
-            characterOrigin: "Long Island, New York"
+            characterMovies: ["Iron Man (2008)", "The Avengers (2012)", "Iron Man 3 (2013)"]
         )
     }
 }

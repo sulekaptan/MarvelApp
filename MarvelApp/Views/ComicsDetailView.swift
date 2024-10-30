@@ -19,11 +19,15 @@ struct ComicsDetailView: View {
             
             ScrollView {
                 VStack {
-                    Image(comicsImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 300)
-                        .padding()
+                    AsyncImage(url: URL(string: comicsImage)) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 300)
+                            .padding()
+                    } placeholder: {
+                        ProgressView()
+                    }
                     
                     Text(comicsName)
                         .font(.custom("Copperplate", fixedSize: 30))

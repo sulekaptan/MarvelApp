@@ -38,11 +38,11 @@ struct CharactersView: View {
                             ForEach(characterViewModel.characters, id: \.self) { character in
                                 NavigationLink(destination: CharacterDetailView(characterName: character.name,
                                                                                 characterDescription: character.description,
-                                                                                characterImage: "\(character.thumbnail.fullPath)",
-                                                                                characterMovies: character.comics.items.map { $0.name },
-                                                                            characterPowers: ["Genius-level intellect", "Powered armor suit", "Expert engineer and combatant"],
-                                                                            characterOrigin: "Long Island, New York")) {
-                                MainCard(imageName: character.thumbnail.fullPath, title: character.name, imageWidth:90, imageHeight: 90, cardWidth: 110, cardHeight: 150, textSize: 13)
+                                                                                characterImage: character.thumbnail.fullPath,
+                                                                                characterMovies: character.comics.items.map { $0.name }
+                                                                            
+                                                                            )) {
+                                MainCard(imageUrl: character.thumbnail.fullPath, title: character.name, imageWidth:90, imageHeight: 90, cardWidth: 110, cardHeight: 150, textSize: 13)
                             }
                             .onAppear {
                                     if character == characterViewModel.characters.last {
