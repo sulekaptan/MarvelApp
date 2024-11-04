@@ -14,17 +14,17 @@ struct CharactersView: View {
     
     @State private var searchText = ""
     
-    let columns = [GridItem(.adaptive(minimum:90), spacing: 5)]
+    @StateObject private var favoritesManager = FavoritesManager()
     
-//    let characters = ["Iron Man", "Captain America", "Thor", "Black Widow", "Hulk", "Hawkeye", "Spider-Man", "Doctor Strange", "Scarlet Witch", "Black Panther", "Ant-Man", "Vision"]
-//
-//        var filteredCharacters: [String] {
-//            if searchText.isEmpty {
-//                return characters
-//            } else {
-//                return characters.filter { $0.localizedCaseInsensitiveContains(searchText) }
-//            }
-//        }
+    let columns = [GridItem(.adaptive(minimum:90), spacing: 5)]
+
+    var filteredCharacters: [Character] {
+            if searchText.isEmpty {
+                return characterViewModel.characters
+            } else {
+                return characterViewModel.characters.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            }
+        }
     
     var body: some View {
         NavigationStack {
@@ -35,15 +35,25 @@ struct CharactersView: View {
                 ScrollView {
                     VStack {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(characterViewModel.characters, id: \.self) { character in
-                                NavigationLink(destination: CharacterDetailView(characterName: character.name,
-                                                                                characterDescription: character.description,
-                                                                                characterImage: character.thumbnail.fullPath,
-                                                                                characterMovies: character.comics.items.map { $0.name }
-                                                                            
-                                                                            )) {
-                                MainCard(imageUrl: character.thumbnail.fullPath, title: character.name, imageWidth:90, imageHeight: 90, cardWidth: 110, cardHeight: 150, textSize: 13)
-                            }
+                            ForEach(filteredCharacters, id: \.self) { character in
+                                NavigationLink(destination: CharacterDetailView(
+                                                                    characterName: character.name,
+                                                                    characterDescription: character.description,
+                                                                    characterImage: character.thumbnail.fullPath,
+                                                                    characterMovies: character.comics.items.map { $0.name }
+                                                                )
+                                                                .environmentObject(favoritesManager)) // Favori yöneticisini sağlıyoruz
+                                                                {
+                                                                    MainCard(
+                                                                        imageUrl: character.thumbnail.fullPath,
+                                                                        title: character.name,
+                                                                        imageWidth: 90,
+                                                                        imageHeight: 90,
+                                                                        cardWidth: 110,
+                                                                        cardHeight: 150,
+                                                                        textSize: 13
+                                                                    )
+                                                                }
                             .onAppear {
                                     if character == characterViewModel.characters.last {
                                         characterViewModel.getCharacters()

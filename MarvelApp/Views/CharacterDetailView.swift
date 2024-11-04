@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct CharacterDetailView: View {
+    @EnvironmentObject var favoritesManager: FavoritesManager
+    
     let characterName: String
     let characterDescription: String
     let characterImage: String
     let characterMovies: [String]
     
-    @State private var isFavorite = false
+    init(characterName: String, characterDescription: String, characterImage: String, characterMovies: [String]) {
+        self.characterName = characterName
+        self.characterDescription = characterDescription
+        self.characterImage = characterImage
+        self.characterMovies = characterMovies
+        _isFavorite = State(initialValue: false)
+    }
+    
+    @State private var isFavorite: Bool
     
     var body: some View {
         NavigationStack {
@@ -51,25 +61,10 @@ struct CharacterDetailView: View {
                                 .padding(.top, 20)
                                                 
                             List(characterMovies, id: \.self) { movie in
-                                NavigationLink(destination: ComicsDetailView(comicsName: "IRON MAN", comicsDescription: "Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.Tony Stark is Iron Man, a wealthy industrialist and genius inventor who builds a powered suit of armor to save his life and then uses the technology to protect the world.", comicsImage: "char")) {
-                                        HStack {
-//                                            AsyncImage(url: URL(string: characterImage)) { image in
-//                                                image
-//                                                    .resizable()
-//                                                    .scaledToFit()
-//                                                    .frame(width: 150, height: 150)
-//                                            } placeholder: {
-//                                                ProgressView()
-//                                            }
-                                            Image("char")
-                                                .resizable()
-                                                .frame(width: 60, height: 60)
-                                                .cornerRadius(8)
-                                                                                            
-                                            Text(movie)
-                                                .font(.custom("Copperplate", fixedSize: 18))
-                                                .foregroundColor(.black)
-                                        }
+                                HStack {
+                                    Text(movie)
+                                        .font(.custom("Copperplate", fixedSize: 18))
+                                        .foregroundColor(.black)
                                 }
                                 .listRowBackground(Color.clear)
                             }
@@ -115,5 +110,6 @@ struct CharacterDetailView_Previews: PreviewProvider {
             characterImage: "char",
             characterMovies: ["Iron Man (2008)", "The Avengers (2012)", "Iron Man 3 (2013)"]
         )
+        .environmentObject(FavoritesManager())
     }
 }

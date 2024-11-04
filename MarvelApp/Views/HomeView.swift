@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
 
+    @State private var isLightMode = false
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 10)]
     
     var body: some View {
@@ -36,13 +37,13 @@ struct HomeView: View {
                             Text("Marvel Cinematic Universe ⚡️")
                                 .font(.custom("Copperplate", fixedSize:20))
                                 .bold()
-                                .foregroundColor(.black)
+                                .foregroundColor(isLightMode ? .black : .white)
                         }
                     }
                     
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            
+                            isLightMode.toggle()
                         } label: {
                             Image(systemName: "moon.fill")
                                 .foregroundColor(Color.primary)
