@@ -10,9 +10,8 @@ import SwiftUI
 struct FavoritesView: View {
 
     @State private var favoriteCharacters: [CharacterFav] = [
-        CharacterFav(name: "Iron Man", image: "char"),
-        CharacterFav(name: "Spider-Man", image: "char"),
-        CharacterFav(name: "Thor", image: "char")
+        CharacterFav(name: "A-Bomb (Has)", image: "bomb"),
+        CharacterFav(name: "A.I.M.", image: "aim")
     ]
     
     var body: some View {

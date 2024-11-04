@@ -37,23 +37,23 @@ struct CharactersView: View {
                         LazyVGrid(columns: columns, spacing: 20) {
                             ForEach(filteredCharacters, id: \.self) { character in
                                 NavigationLink(destination: CharacterDetailView(
-                                                                    characterName: character.name,
-                                                                    characterDescription: character.description,
-                                                                    characterImage: character.thumbnail.fullPath,
-                                                                    characterMovies: character.comics.items.map { $0.name }
-                                                                )
-                                                                .environmentObject(favoritesManager)) // Favori yöneticisini sağlıyoruz
-                                                                {
-                                                                    MainCard(
-                                                                        imageUrl: character.thumbnail.fullPath,
-                                                                        title: character.name,
-                                                                        imageWidth: 90,
-                                                                        imageHeight: 90,
-                                                                        cardWidth: 110,
-                                                                        cardHeight: 150,
-                                                                        textSize: 13
-                                                                    )
-                                                                }
+                                    characterName: character.name,
+                                    characterDescription: character.description,
+                                    characterImage: character.thumbnail.fullPath,
+                                    characterMovies: character.comics.items.map { $0.name }
+                                    )
+                                    .environmentObject(favoritesManager))
+                                {
+                                    MainCard(
+                                        imageUrl: character.thumbnail.fullPath,
+                                        title: character.name,
+                                        imageWidth: 90,
+                                        imageHeight: 90,
+                                        cardWidth: 110,
+                                        cardHeight: 150,
+                                        textSize: 13
+                                    )
+                                }
                             .onAppear {
                                     if character == characterViewModel.characters.last {
                                         characterViewModel.getCharacters()

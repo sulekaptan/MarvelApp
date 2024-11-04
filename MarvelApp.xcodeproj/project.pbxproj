@@ -167,7 +167,6 @@
 		E4AD935B2CB00414006483CD = {
 			isa = PBXGroup;
 			children = (
-				E490F4102CD90BBA00F180A8 /* FavoritesManager.swift */,
 				E4AD93662CB00414006483CD /* MarvelApp */,
 				E4AD93652CB00414006483CD /* Products */,
 			);
@@ -222,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				E4DFF7B62CC834FB000BF7F7 /* NetworkManager.swift */,
+				E490F4102CD90BBA00F180A8 /* FavoritesManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";

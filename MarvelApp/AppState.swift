@@ -10,6 +10,6 @@ import FirebaseAuth
 import SwiftUI
 
 class AppState: ObservableObject {
-    @Published var isUserLoggedIn: Bool = true
+    @Published var isUserLoggedIn: Bool = false
 //    Auth.auth().currentUser != nil
 }
