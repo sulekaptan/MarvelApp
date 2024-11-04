@@ -9,7 +9,6 @@ Marvel Comics App is an iOS application that allows users to explore Marvel char
 - [Usage](#usage)
 - [Architecture](#architecture)
 - [Screens](#screens)
-- [Development](#development)
 - [Requirements](#requirements)
 
 ## Features
@@ -51,20 +50,20 @@ The app follows the MVVM (Model-View-ViewModel) architecture pattern.
 * View: Builds the user interface and displays data from the ViewModel.
 
 ## Screens
-<img width="200" src="https://github.com/user-attachments/assets/e6756c3c-7c82-4920-a3f0-3c8418346814">
-<img width="200" src="https://github.com/user-attachments/assets/12547cad-b985-47eb-ac89-80b5bec21b9b">
-<img width="200" src="https://github.com/user-attachments/assets/42e8d8d5-341a-4a24-9bbb-dfb210c64b26">
-<img width="200" src="https://github.com/user-attachments/assets/898a9fa2-d4f3-4eb3-b0a8-4b905bb1d9cc">
-<img width="200" src="https://github.com/user-attachments/assets/865a029e-0913-4c0c-a42a-71480c4988bf">
-<img width="200" src="https://github.com/user-attachments/assets/63fba956-b697-45d2-b831-46b31ae616bb">
-<img width="200"  src="https://github.com/user-attachments/assets/d0aefbe1-753a-4a36-b17b-34d0ca81a16d">
-<img width="200" src="https://github.com/user-attachments/assets/f9fdc9a9-3767-4ff8-9f77-82ac19536512">
-<img width="200" src="https://github.com/user-attachments/assets/ecc3e623-2663-4b22-89a8-f4995dc54c26">
-<img width="200" src="https://github.com/user-attachments/assets/d7d95e58-e419-4ab6-a36a-ab8576082c25">
-<img width="200" src="https://github.com/user-attachments/assets/74279dee-a9d0-468e-a081-e2acc7d762f1">
-<img width="200" src="https://github.com/user-attachments/assets/a433af15-7edc-47e9-83e9-9aa6c8a1d6d6">
-<img width="200" src="https://github.com/user-attachments/assets/0ce8f3a9-45aa-4b02-af37-397e9bfdbf07">
-<img width="200" src="https://github.com/user-attachments/assets/2e054fa5-2a98-4164-bcd5-b9e5f90bf281">
+<img width="200"  src="https://github.com/user-attachments/assets/6bbb8a02-4bd3-4de7-b8ad-2499d7d680b9">
+<img width="200" src="https://github.com/user-attachments/assets/aed878bd-cf24-41cd-b22d-969df19c4524">
+<img width="200"src="https://github.com/user-attachments/assets/29c1026f-6cad-4a7f-ae90-68e592023c76">
+<img width="200" src="https://github.com/user-attachments/assets/5058b8a9-4d64-4206-96dc-c16da9752c55">
+<img width="200" src="https://github.com/user-attachments/assets/e9ca03ad-90e1-40a8-a737-6cf9b2b089ec">
+<img width="200" src="https://github.com/user-attachments/assets/800b5cf4-f1ac-4877-b863-a52053f8ba83">
+<img width="200"  src="https://github.com/user-attachments/assets/78bffbcf-6238-4bf4-aaa2-513156d135f8">
+<img width="200"  src="https://github.com/user-attachments/assets/ffc8c6f2-3286-448e-b7c8-52fc2a602bbe">
+<img width="200"  src="https://github.com/user-attachments/assets/55d84fab-d1ca-4919-9000-d659ff4f33a4">
+<img width="200" src="https://github.com/user-attachments/assets/693a3dfd-28cf-4608-ba58-40f01f544b0d">
+<img width="200" src="https://github.com/user-attachments/assets/e50fb42f-8bac-4c66-a4af-ec78612574c5">
+<img width="200" src="https://github.com/user-attachments/assets/ad69884b-b2ec-4fd4-affc-6e9c068197d3">
+<img width="200"src="https://github.com/user-attachments/assets/0b4757f8-0080-4006-ac70-01b831c0849d">
+<img width="200" src="https://github.com/user-attachments/assets/2f87a37a-e4c8-41ba-8d01-16aa31782ef0">
 
 ## Requirements
 * iOS 14.0+
