@@ -42,7 +42,7 @@ Marvel Comics App is an iOS application that allows users to explore Marvel char
 * The HomeView displays various Marvel content categories. Each category shows a name and image, which is loaded using `AsyncImage`.
 * This screen lists characters with pagination, utilizing AsyncImage to load character images.
 * Handles user login and registration through `Firebase Authentication`.
-* Basic configuration to fetch data from the `Marvel API.
+* Basic configuration to fetch data from the `Marvel API`.
 
 ## Architecture
 The app follows the MVVM (Model-View-ViewModel) architecture pattern.
@@ -55,7 +55,7 @@ The app follows the MVVM (Model-View-ViewModel) architecture pattern.
 <img width="200" src="https://github.com/user-attachments/assets/12547cad-b985-47eb-ac89-80b5bec21b9b">
 <img width="200" src="https://github.com/user-attachments/assets/42e8d8d5-341a-4a24-9bbb-dfb210c64b26">
 <img width="200" src="https://github.com/user-attachments/assets/898a9fa2-d4f3-4eb3-b0a8-4b905bb1d9cc">
-<img width="200" src="https://github.com/user-attachments/assets/acae53b3-bd84-4c26-9dad-7cd5af85416a">
+<img width="200" src="https://github.com/user-attachments/assets/865a029e-0913-4c0c-a42a-71480c4988bf">
 <img width="200" src="https://github.com/user-attachments/assets/63fba956-b697-45d2-b831-46b31ae616bb">
 <img width="200"  src="https://github.com/user-attachments/assets/d0aefbe1-753a-4a36-b17b-34d0ca81a16d">
 <img width="200" src="https://github.com/user-attachments/assets/f9fdc9a9-3767-4ff8-9f77-82ac19536512">
